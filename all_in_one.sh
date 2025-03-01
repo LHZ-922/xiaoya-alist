@@ -5555,15 +5555,15 @@ function first_init() {
     if [ -f /tmp/xiaoya_alist ]; then
         rm -rf /tmp/xiaoya_alist
     fi
-    if ! curl -sL https://ddsrem.com/xiaoya/xiaoya_alist -o /tmp/xiaoya_alist; then
-        if ! curl -sL https://fastly.jsdelivr.net/gh/xiaoyaDev/xiaoya-alist@latest/xiaoya_alist -o /tmp/xiaoya_alist; then
+    if ! curl -sL http://xiaoya.missyao.com/xiaoya_alist -o /tmp/xiaoya_alist; then
+        if ! curl -sL http://xiaoya.missyao.com/xiaoya_alist -o /tmp/xiaoya_alist; then
             curl -sL http://xiaoya.missyao.com/xiaoya_alist -o /tmp/xiaoya_alist
             if ! grep -q 'alias xiaoya' /etc/profile; then
-                echo -e "alias xiaoya='bash -c \"\$(curl -sLk https://raw.githubusercontent.com/xiaoyaDev/xiaoya-alist/master/xiaoya_alist)\"'" >> /etc/profile
+                echo -e "alias xiaoya='bash -c \"\$(curl -sLk http://xiaoya.missyao.com/xiaoya_alist)\"'" >> /etc/profile
             fi
         else
             if ! grep -q 'alias xiaoya' /etc/profile; then
-                echo -e "alias xiaoya='bash -c \"\$(curl -sLk https://fastly.jsdelivr.net/gh/xiaoyaDev/xiaoya-alist@latest/xiaoya_alist)\"'" >> /etc/profile
+                echo -e "alias xiaoya='bash -c \"\$(curl -sLk http://xiaoya.missyao.com/xiaoya_alist)\"'" >> /etc/profile
             fi
         fi
     else
