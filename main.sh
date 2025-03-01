@@ -13,7 +13,7 @@ export PATH
 #                       __/ |
 #                      |___/
 #
-# Copyright (c) 2024 DDSRem <https://blog.ddsrem.com>
+# 
 #
 # This is free software, licensed under the GNU General Public License v3.0.
 #
