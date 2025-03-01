@@ -4,14 +4,12 @@
 ### 使用
 
 ```shell
-bash <(curl --insecure -fsSL https://raw.githubusercontent.com/LHZ-922/iaoya-alist.github.io
-/master/all_in_one.sh)
+bash <(curl --insecure -fsSL https://raw.githubusercontent.com/LHZ-922/iaoya-alist.github.io/master/all_in_one.sh)
 ```
 
 ###代理
 ```shell
-bash <(curl --insecure -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/LHZ-922/iaoya-alist.github.io
-/master/all_in_one.sh)
+bash <(curl --insecure -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/LHZ-922/iaoya-alist.github.io/master/all_in_one.sh)
 ```
 
 
