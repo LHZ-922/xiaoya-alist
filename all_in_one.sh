@@ -102,7 +102,7 @@ function get_default_network() {
 
     _default_network=$(cat "${DDSREM_CONFIG_DIR}/default_network.txt")
 
-    if [ "${_default_network}" == "host" ]; 键，然后
+    if [ "${_default_network}" == "host" ]; then
         echo '--net=host'
     else
         case "${1}" in
@@ -130,25 +130,25 @@ function get_path() {
         path_lib=/mnt/user/appdata
         ;;
     fnos)
-        if [ -d "/vol1/1000" ]; 键，然后
+        if [ -d "/vol1/1000" ]; then
             path_lib=/vol1/1000
         fi
         ;;
     macos)
-        if [ -n "${RUN_USER}" ]; 键，然后
+        if [ -n "${RUN_USER}" ]; then
             path_lib="/Users/${RUN_USER}/Documents"
         fi
         ;;
     *)
-        if auto_path="$(df -h | awk '$2 ~ /G/ && $2+0 > 200 {print $6}' | grep -E -v "Avail|loop|boot|overlay|tmpfs|proc" | head -n 1)" > /dev/null 2>&1; 键，然后
-            if check_path "${auto_path}"; 键，然后
+        if auto_path="$(df -h | awk '$2 ~ /G/ && $2+0 > 200 {print $6}' | grep -E -v "Avail|loop|boot|overlay|tmpfs|proc" | head -n 1)" > /dev/null 2>&1; then
+            if check_path "${auto_path}"; then
                 path_lib="${auto_path}"
             fi
         fi
         ;;
     esac
 
-    if [ -z "${path_lib}" ]; 键，然后
+    if [ -z "${path_lib}" ]; then
         case "${1}" in
         xiaoya_alist_config_dir)
             echo '/etc/xiaoya'
@@ -1209,7 +1209,7 @@ function main_account_management() {
 
     echo -e "——————————————————————————————————————————————————————————————————————————————————"
     echo -e "${Blue}账号管理${Font}\n"
-    echo -e "${Sky_Blue}Fe₃O₄留言，会员购买指南：
+    echo -e "${Sky_Blue}小雅留言，会员购买指南：
 基础版：阿里非会员+115会员+夸克88vip
 升级版：阿里svip+115会员+夸克88vip（用TV token破解阿里svip的高速流量限制）
 豪华版：阿里svip+第三方权益包+115会员+夸克svip
@@ -5555,15 +5555,15 @@ function first_init() {
     if [ -f /tmp/xiaoya_alist ]; then
         rm -rf /tmp/xiaoya_alist
     fi
-    if ! curl -sL http://xiaoya.missyao.com/xiaoya_alist -o /tmp/xiaoya_alist; then
-        if ! curl -sL http://xiaoya.missyao.com/xiaoya_alist -o /tmp/xiaoya_alist; then
-            curl -sL http://xiaoya.missyao.com/xiaoya_alist -o /tmp/xiaoya_alist
+    if ! curl -sL https://ddsrem.com/xiaoya/xiaoya_alist -o /tmp/xiaoya_alist; then
+        if ! curl -sL https://fastly.jsdelivr.net/gh/xiaoyaDev/xiaoya-alist@latest/xiaoya_alist -o /tmp/xiaoya_alist; then
+            curl -sL https://raw.githubusercontent.com/xiaoyaDev/xiaoya-alist/master/xiaoya_alist -o /tmp/xiaoya_alist
             if ! grep -q 'alias xiaoya' /etc/profile; then
-                echo -e "alias xiaoya='bash -c \"\$(curl -sLk http://xiaoya.missyao.com/xiaoya_alist)\"'" >> /etc/profile
+                echo -e "alias xiaoya='bash -c \"\$(curl -sLk https://raw.githubusercontent.com/xiaoyaDev/xiaoya-alist/master/xiaoya_alist)\"'" >> /etc/profile
             fi
         else
             if ! grep -q 'alias xiaoya' /etc/profile; then
-                echo -e "alias xiaoya='bash -c \"\$(curl -sLk http://xiaoya.missyao.com/xiaoya_alist)\"'" >> /etc/profile
+                echo -e "alias xiaoya='bash -c \"\$(curl -sLk https://fastly.jsdelivr.net/gh/xiaoyaDev/xiaoya-alist@latest/xiaoya_alist)\"'" >> /etc/profile
             fi
         fi
     else
