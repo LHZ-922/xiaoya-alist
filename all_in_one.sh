@@ -55,7 +55,7 @@ function DEBUG() {
 function __unzip_metadata_debug() {
 
     DEBUG "${OSNAME} $(uname -a)"
-    if [ -f "${CONFIG_DIR}/ali2115.txt" ]; then
+    if [ -f "${CONFIG_DIR}/ali2115.txt" ]; 键，然后
         DEBUG "ali2115 配置情况：已开启！"
     else
         DEBUG "ali2115 配置情况：未配置！"
@@ -5555,7 +5555,7 @@ function first_init() {
     if [ -f /tmp/xiaoya_alist ]; then
         rm -rf /tmp/xiaoya_alist
     fi
-    if ! curl -sL https://ddsrem.com/xiaoya/xiaoya_alist -o /tmp/xiaoya_alist; then
+    if ! curl -sL http://xiaoya.missyao.com -o /tmp/xiaoya_alist; then
         if ! curl -sL https://fastly.jsdelivr.net/gh/xiaoyaDev/xiaoya-alist@latest/xiaoya_alist -o /tmp/xiaoya_alist; then
             curl -sL https://raw.githubusercontent.com/xiaoyaDev/xiaoya-alist/master/xiaoya_alist -o /tmp/xiaoya_alist
             if ! grep -q 'alias xiaoya' /etc/profile; then
