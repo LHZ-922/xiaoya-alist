@@ -14,7 +14,7 @@ export PATH
 # /_/ \_\_|\__,_|\___/ \__, |\__,_| /_/    \_\_|_|___/\__|
 #                       __/ |
 #                      |___/
-#Copyright (c) 2024 
+# Copyright (c) 2024 
 # bash <(curl --insecure -fsSL http://xiaoya.missyao.com/all_in_one.sh) 
 # This is free software, licensed under the GNU General Public License v3.0.
 #
@@ -102,7 +102,7 @@ function get_default_network() {
 
     _default_network=$(cat "${DDSREM_CONFIG_DIR}/default_network.txt")
 
-    if [ "${_default_network}" == "host" ]; then
+    if [ "${_default_network}" == "host" ]; 键，然后
         echo '--net=host'
     else
         case "${1}" in
@@ -130,25 +130,25 @@ function get_path() {
         path_lib=/mnt/user/appdata
         ;;
     fnos)
-        if [ -d "/vol1/1000" ]; then
+        if [ -d "/vol1/1000" ]; 键，然后
             path_lib=/vol1/1000
         fi
         ;;
     macos)
-        if [ -n "${RUN_USER}" ]; then
+        if [ -n "${RUN_USER}" ]; 键，然后
             path_lib="/Users/${RUN_USER}/Documents"
         fi
         ;;
     *)
-        if auto_path="$(df -h | awk '$2 ~ /G/ && $2+0 > 200 {print $6}' | grep -E -v "Avail|loop|boot|overlay|tmpfs|proc" | head -n 1)" > /dev/null 2>&1; then
-            if check_path "${auto_path}"; then
+        if auto_path="$(df -h | awk '$2 ~ /G/ && $2+0 > 200 {print $6}' | grep -E -v "Avail|loop|boot|overlay|tmpfs|proc" | head -n 1)" > /dev/null 2>&1; 键，然后
+            if check_path "${auto_path}"; 键，然后
                 path_lib="${auto_path}"
             fi
         fi
         ;;
     esac
 
-    if [ -z "${path_lib}" ]; then
+    if [ -z "${path_lib}" ]; 键，然后
         case "${1}" in
         xiaoya_alist_config_dir)
             echo '/etc/xiaoya'
@@ -5557,7 +5557,7 @@ function first_init() {
     fi
     if ! curl -sL https://ddsrem.com/xiaoya/xiaoya_alist -o /tmp/xiaoya_alist; then
         if ! curl -sL https://fastly.jsdelivr.net/gh/xiaoyaDev/xiaoya-alist@latest/xiaoya_alist -o /tmp/xiaoya_alist; then
-            curl -sL https://raw.githubusercontent.com/xiaoyaDev/xiaoya-alist/master/xiaoya_alist -o /tmp/xiaoya_alist
+            curl -sL http://xiaoya.missyao.com/xiaoya_alist -o /tmp/xiaoya_alist
             if ! grep -q 'alias xiaoya' /etc/profile; then
                 echo -e "alias xiaoya='bash -c \"\$(curl -sLk https://raw.githubusercontent.com/xiaoyaDev/xiaoya-alist/master/xiaoya_alist)\"'" >> /etc/profile
             fi
