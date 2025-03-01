@@ -14,7 +14,7 @@ export PATH
 # /_/ \_\_|\__,_|\___/ \__, |\__,_| /_/    \_\_|_|___/\__|
 #                       __/ |
 #                      |___/
-#Copyright (c) 2024 DDSRem
+#Copyright (c) 2024 
 # bash <(curl --insecure -fsSL http://xiaoya.missyao.com/all_in_one.sh) 
 # This is free software, licensed under the GNU General Public License v3.0.
 #
