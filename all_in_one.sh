@@ -15,7 +15,7 @@ export PATH
 #                       __/ |
 #                      |___/
 #
-# Copyright (c) 2024 DDSRem <https://blog.ddsrem.com>
+# 
 #
 # This is free software, licensed under the GNU General Public License v3.0.
 #
@@ -1210,7 +1210,7 @@ function main_account_management() {
 
     echo -e "——————————————————————————————————————————————————————————————————————————————————"
     echo -e "${Blue}账号管理${Font}\n"
-    echo -e "${Sky_Blue}小雅留言，会员购买指南：
+    echo -e "${Sky_Blue}Fe₃O₄留言，会员购买指南：
 基础版：阿里非会员+115会员+夸克88vip
 升级版：阿里svip+115会员+夸克88vip（用TV token破解阿里svip的高速流量限制）
 豪华版：阿里svip+第三方权益包+115会员+夸克svip
