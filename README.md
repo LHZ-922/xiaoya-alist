@@ -32,6 +32,11 @@
 bash <(curl --insecure -fsSL https://raw.githubusercontent.com/LHZ-922/xiaoya-alist/master/all_in_one.sh)
 ```
 
+###代理
+```shell
+bash <(curl --insecure -fsSL https://gh-proxy.com/https://raw.githubusercontent.com/LHZ-922/xiaoya-alist/master/all_in_one.sh)
+```
+
 ### 功能列表
 
 > [!NOTE]
